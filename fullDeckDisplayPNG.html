@@ -11,24 +11,39 @@
         font-size: 1rem;
         line-height: 2.5rem;
       }
+      h2 {
+        color: #444;
+        font-weight: bold;
+      }
       .card {
         display: inline-block;
         margin: 5px;
-        width: 80px; /* adjust as needed */
+        width: 80px;
         height: auto;
+        filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5)) /* shadow */
+          drop-shadow(0 0 5px currentColor); /* glow */
+        transition: transform 0.1s ease, filter 0.2s ease;
       }
-      .spades,
-      .clubs {
+      .spades .card,
+      .clubs .card {
+        color: black;
       }
-      .hearts,
-      .diamonds {
+
+      .hearts .card,
+      .diamonds .card {
+        color: red;
+      }
+
+      .card:hover {
+        filter: drop-shadow(0 6px 8px rgb(0, 119, 255, 0.5));
+        transform: translateY(-10px) scale(1.15);
       }
     </style>
   </head>
   <body>
     <h1>Full Deck (PNG Images)</h1>
 
-    <h2>Spades ♠</h2>
+    <h2><span style="color: black">♠</span> Spades</h2>
     <div class="spades">
       <img
         class="card"
@@ -97,7 +112,7 @@
       />
     </div>
 
-    <h2>Hearts ♥</h2>
+    <h2><span style="color: red">♥</span> Hearts</h2>
     <div class="hearts">
       <img
         class="card"
@@ -166,7 +181,7 @@
       />
     </div>
 
-    <h2>Diamonds ♦</h2>
+    <h2><span style="color: red">♦</span> Diamonds</h2>
     <div class="diamonds">
       <img
         class="card"
@@ -235,7 +250,7 @@
       />
     </div>
 
-    <h2>Clubs ♣</h2>
+    <h2><span style="color: black">♣</span> Clubs</h2>
     <div class="clubs">
       <img
         class="card"
