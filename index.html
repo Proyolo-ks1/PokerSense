@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Poker Evaluator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Poker Game Analyzer</h1>
+
+    <div id="controls">
+      <select id="mode">
+        <option value="texas">Texas Hold'em</option>
+        <!-- later: omaha, etc -->
+      </select>
+
+      <button id="addPlayer">+ Speler</button>
+      <button id="rulesBtn">Regels</button>
+    </div>
+
+    <div id="players"></div>
+
+    <h2>Middenkaarten</h2>
+    <div id="board">
+      <select class="card"></select>
+      <select class="card"></select>
+      <select class="card"></select>
+      <select class="card"></select>
+      <select class="card"></select>
+    </div>
+
+    <h2>Resultaat</h2>
+    <div id="result">
+      <strong>Wie wint:</strong>
+      <span id="winner">—</span>
+      <p id="explanation">Kies kaarten om het resultaat te zien.</p>
+    </div>
+
+    <div id="rules" hidden>
+      <h3>Texas Hold'em regels</h3>
+      <ul>
+        <li><a href="#" data-rule="two-pair">Two Pair</a></li>
+        <li><a href="#" data-rule="kicker">Kicker</a></li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
